@@ -1,6 +1,6 @@
 # A04 – Vytvoření SQLite databáze z CSV souborů
 
-## 🔍 Cíl úkolu
+## Cíl úkolu
 Cílem je vytvořit Python skript, který:
 - vytvoří databázi `db.sqlite`,
 - načte data z CSV souborů uložených v archivu `world.zip`,
