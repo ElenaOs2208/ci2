@@ -1,0 +1,919 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<head id="headMaster"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	AIST:Spectral Database for Organic Compounds,SDBS
+</title><link rel="icon" href="data:," /><link href="Styles/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+
+    
+    <script type="text/javascript" src=/Scripts/jquery-3.7.1.min.js></script>
+    <script type="text/javascript" src=/Scripts/bootstrap.min.js></script>
+
+    
+    <link href="/Forms/Project/SearchResult/Styles/SearchResult.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form method="post" action="./SearchResult.aspx" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'btnDefault')" id="formMaster" class="ContentArea ResultList-Content">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['formMaster'];
+if (!theForm) {
+    theForm = document.formMaster;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZJOvTxSpFi0GFVyoTbXiq_hLF169foFLD-qmEkv_u0rkePQ5mQmZNfCVCdbB0-CkxA2&amp;t=638902095720898773" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=JoBkLzP19aTuxbWOhHobYkWDfjGLA_lRhOHST2xWimVQS8Tu32CMIssaww3TLC0uYj7KjSvb7L5FkilNyLuHkw2&amp;t=638902095720898773" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F8B5C114" />
+	<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="NYsL-ZHXVgDzKvhsiuscOYwdMkIotNAYV4C2vrBCqHXWZyqSF2b8NclAP9S6kCA_GhYc8dYxclcGPxjD5GYpu7NsWOrz0TX4JIrIyvH9aRE1" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+</div>
+
+        
+        <input type="submit" name="ctl00$btnDefault" value="" onclick="return false;" id="btnDefault" class="NonDisplay" />
+
+        
+        
+
+<script type="text/javascript">
+    $(() => {
+        let headerScript = {};
+
+        /* 
+        * ヘッダーボタンクリックイベント 
+        */
+
+        // 概要ボタン
+        headerScript.btnIntroduction_click = () => {
+            const Value = document.cookie;
+            if (Value != "") {
+                const cookie = Value.match(new RegExp("SDBS_LANG" + '\=([^\;]*)\;*'))[0];
+                if (cookie.includes("jp")) {//日本語なら
+                    window.open('/Htmls/Introduction_jp.html', '_blank', 'menubar=yes');
+                }
+                else {//日本語以外なら
+                    window.open('/Htmls/Introduction_eng.html', '_blank', 'menubar=yes');
+                }
+            }
+            else {
+                //何もないなら英語で出す
+                window.open('/Htmls/Introduction_eng.html', '_blank', 'menubar=yes');
+            }
+            return false;
+        };
+
+        // 免責ボタン
+        headerScript.btnDisclaimer_click = () => {
+            const Value = document.cookie;
+            if (Value != "") {
+                const cookie = Value.match(new RegExp("SDBS_LANG" + '\=([^\;]*)\;*'))[0];
+                if (cookie.includes("jp")) {//日本語なら
+                    window.open('/Htmls/disclaimer_jp.html', '_blank', 'menubar=yes');
+                }
+                else {//日本語以外なら
+                    window.open('/Htmls/disclaimer_eng.html', '_blank', 'menubar=yes');
+                }
+            }
+            else {//何もないなら英語で出す
+                window.open('/Htmls/disclaimer_eng.html', '_blank', 'menubar=yes');
+            }
+            return false;
+        };
+
+        // ヘルプボタン
+        headerScript.btnHelp_click = () => {
+            const Value = document.cookie;
+            if (Value != "") {
+                const cookie = Value.match(new RegExp("SDBS_LANG" + '\=([^\;]*)\;*'))[0];
+                
+                if (cookie.includes("jp")) {//日本語なら
+                    window.open('/Htmls/help_jp.html', '_blank', 'menubar=yes');
+                    
+
+                }
+                else {//日本語以外なら
+                    window.open('/Htmls/help_eng.html', '_blank', 'menubar=yes');
+                }
+            }
+            else {//何もないなら英語で出す
+                window.open('/Htmls/help_eng.html', '_blank', 'menubar=yes');
+            }
+            return false;
+        };
+
+        // コンタクトボタン
+        headerScript.btnContact_click = () => {
+            const Value = document.cookie;
+            if (Value != "") {
+                const cookie = Value.match(new RegExp("SDBS_LANG" + '\=([^\;]*)\;*'))[0];
+                
+                if (cookie.includes("jp")) {//日本語なら
+                    //window.open('/Htmls/contact_jp.html', '_blank', 'menubar=yes');
+		    window.open('https://forms.office.com/r/hW2WANjRqe', '_blank', 'menubar=yes');
+                }
+                else {//日本語以外なら
+                    //window.open('/Htmls/contact_eng.html', '_blank', 'menubar=yes');
+		    window.open('https://forms.office.com/r/hW2WANjRqe', '_blank', 'menubar=yes');
+                }
+            }
+            else {//何もないなら英語で出す
+                window.open('/Htmls/help_eng.html', '_blank', 'menubar=yes');
+            }
+            return false;
+        };
+
+        // 最新情報ボタン
+        headerScript.btnNew_click = () => {
+            const Value = document.cookie;
+            if (Value != "") {
+                const cookie = Value.match(new RegExp("SDBS_LANG" + '\=([^\;]*)\;*'))[0];
+                
+                if (cookie.includes("jp")) {//日本語なら
+                    window.open('/Htmls/whatsnew_jp.html', '_blank', 'menubar=yes');
+                }
+                else {//日本語以外なら
+                    window.open('/Htmls/whatsnew_eng.html', '_blank', 'menubar=yes');
+                }
+            }
+            else {//何もないなら英語で出す
+                window.open('/Htmls/help_eng.html', '_blank', 'menubar=yes');
+            }
+            return false;
+        };
+
+        // FAQボタン
+        headerScript.btnFAQ_click = () => {
+            const Value = document.cookie;
+            if (Value != "") {
+                const cookie = Value.match(new RegExp("SDBS_LANG" + '\=([^\;]*)\;*'))[0];
+                
+                if (cookie.includes("jp")) {//日本語なら
+                    window.open('/Htmls/faq_jp.html', '_blank', 'menubar=yes');
+                }
+                else {//日本語以外なら
+                    window.open('/Htmls/faq_eng.html', '_blank', 'menubar=yes');
+                }
+            }
+            else {//何もないなら英語で出す
+                window.open('/Htmls/help_eng.html', '_blank', 'menubar=yes');
+            }
+            return false;
+        };
+
+        // リンクボタン
+        headerScript.btnLink_click = () => {
+            const Value = document.cookie;
+            if (Value != "") {
+                const cookie = Value.match(new RegExp("SDBS_LANG" + '\=([^\;]*)\;*'))[0];
+                
+                if (cookie.includes("jp")) {//日本語なら
+                    window.open('/Htmls/link_jp.html', '_blank', 'menubar=yes');
+                }
+                else {//日本語以外なら
+                    window.open('/Htmls/link_eng.html', '_blank', 'menubar=yes');
+                }
+            }
+            else {//何もないなら英語で出す
+                window.open('/Htmls/help_eng.html', '_blank', 'menubar=yes');
+            }
+            return false;
+        };
+
+        // ロゴ
+        headerScript.logo_click = () => {
+            const Value = document.cookie;
+            if (Value != "") {
+                const cookie = Value.match(new RegExp("SDBS_LANG" + '\=([^\;]*)\;*'))[0];
+
+                if (cookie.includes("jp")) {//日本語なら
+                    window.open('https://www.aist.go.jp', '_blank');
+                }
+                else {//日本語以外なら
+                    window.open('https://www.aist.go.jp/index_en.html', '_blank');
+                }
+            }
+            else {//何もないなら英語で出す
+                window.open('https://www.aist.go.jp/index_en.html', '_blank');
+            }
+            return false;
+        };
+        // publish
+        document.headerScript = headerScript;
+    });
+
+    const HeaderHiddenIdList = {
+        companame: "#CtlMasterHeader_companame",
+        jsearch_opt: "#CtlMasterHeader_jsearch_opt",
+        formula: "#CtlMasterHeader_formula",
+        mw_from: "#CtlMasterHeader_mw_from",
+        mw_to: "#CtlMasterHeader_mw_to",
+        regno: "#CtlMasterHeader_regno",
+        sdbsno: "#CtlMasterHeader_sdbsno",
+        c_from: "#CtlMasterHeader_c_from",
+        c_to: "#CtlMasterHeader_c_to",
+        h_from: "#CtlMasterHeader_h_from",
+        h_to: "#CtlMasterHeader_h_to",
+        n_from: "#CtlMasterHeader_n_from",
+        n_to: "#CtlMasterHeader_n_to",
+        o_from: "#CtlMasterHeader_o_from",
+        o_to: "#CtlMasterHeader_o_to",
+        f_from: "#CtlMasterHeader_f_from",
+        f_to: "#CtlMasterHeader_f_to",
+        cl_from: "#CtlMasterHeader_cl_from",
+        cl_to: "#CtlMasterHeader_cl_to",
+        br_from: "#CtlMasterHeader_br_from",
+        br_to: "#CtlMasterHeader_br_to",
+        i_from: "#CtlMasterHeader_i_from",
+        i_to: "#CtlMasterHeader_i_to",
+        s_from: "#CtlMasterHeader_s_from",
+        s_to: "#CtlMasterHeader_s_to",
+        p_from: "#CtlMasterHeader_p_from",
+        p_to: "#CtlMasterHeader_p_to",
+        si_from: "#CtlMasterHeader_si_from",
+        si_to: "#CtlMasterHeader_si_to",
+        ir_Value_st: "#CtlMasterHeader_ir_Value_st",
+        ir_range: "#CtlMasterHeader_ir_range",
+        ir_trans_st: "#CtlMasterHeader_ir_trans_st",
+        cnmr_Value_st: "#CtlMasterHeader_cnmr_Value_st",
+        cnmr_range: "#CtlMasterHeader_cnmr_range",
+        cnmr_not_st: "#CtlMasterHeader_cnmr_not_st",
+        hnmr_Value_st: "#CtlMasterHeader_hnmr_Value_st",
+        hnmr_range: "#CtlMasterHeader_hnmr_range",
+        hnmr_not_st: "#CtlMasterHeader_hnmr_not_st",
+        match_type: "#CtlMasterHeader_match_type",
+        massno_st: "#CtlMasterHeader_massno_st",
+        page_list: "#CtlMasterHeader_page_list",
+        order_opt: "#CtlMasterHeader_order_opt",
+        order_desc: "#CtlMasterHeader_order_desc",
+        spectrum: "#CtlMasterHeader_spectrum",
+        result_type: "#CtlMasterHeader_result_type"
+    };
+</script>
+<div id="header" class="HeaderArea">
+    <div class="TableArea">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        
+                        <span id="CtlMasterHeader_HeaderTitleLabel" style="color:White;font-size:Large;"><b>Spectral Database for<br/>Organic Compounds SDBS</b></span>
+                    </td>
+                    <td>
+                        
+                        <input type="submit" name="ctl00$CtlMasterHeader$LanguageButton" value="Japanese" id="CtlMasterHeader_LanguageButton" />
+                    </td>
+                    <td>
+                        
+                        <input type="submit" name="ctl00$CtlMasterHeader$IntroductionButton" value="Introduction" onclick="return document.headerScript.btnIntroduction_click();" id="CtlMasterHeader_IntroductionButton" />
+                    </td>
+                    <td>
+                        
+                        <input type="submit" name="ctl00$CtlMasterHeader$DisclaimerButton" value="Disclaimer" onclick="return document.headerScript.btnDisclaimer_click();" id="CtlMasterHeader_DisclaimerButton" />
+                    </td>
+                    <td>
+                        
+                        <input type="submit" name="ctl00$CtlMasterHeader$HelpButton" value="HELP" onclick="return document.headerScript.btnHelp_click();" id="CtlMasterHeader_HelpButton" />
+                    </td>
+                    <td>
+                        
+                        <input type="submit" name="ctl00$CtlMasterHeader$ContactButton" value="Contact" onclick="return document.headerScript.btnContact_click();" id="CtlMasterHeader_ContactButton" />
+                    </td>
+                    <td>
+                        
+                        <input type="submit" name="ctl00$CtlMasterHeader$LatestNewsButton" value="What&#39;s New" onclick="return document.headerScript.btnNew_click();" id="CtlMasterHeader_LatestNewsButton" />
+                    </td>
+                    <td>
+                        
+                        <input type="submit" name="ctl00$CtlMasterHeader$FAQButton" value="FAQ" onclick="return document.headerScript.btnFAQ_click();" id="CtlMasterHeader_FAQButton" />
+                    </td>
+                    <td>
+                        
+                        <input type="submit" name="ctl00$CtlMasterHeader$LinkButton" value="Link" onclick="return document.headerScript.btnLink_click();" id="CtlMasterHeader_LinkButton" />
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <img src="Images/hr.png" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$companame" id="CtlMasterHeader_companame" value="benzidine" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$formula" id="CtlMasterHeader_formula" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$mw_from" id="CtlMasterHeader_mw_from" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$mw_to" id="CtlMasterHeader_mw_to" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$regno" id="CtlMasterHeader_regno" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$sdbsno" id="CtlMasterHeader_sdbsno" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$c_from" id="CtlMasterHeader_c_from" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$c_to" id="CtlMasterHeader_c_to" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$h_from" id="CtlMasterHeader_h_from" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$h_to" id="CtlMasterHeader_h_to" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$n_from" id="CtlMasterHeader_n_from" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$n_to" id="CtlMasterHeader_n_to" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$o_from" id="CtlMasterHeader_o_from" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$o_to" id="CtlMasterHeader_o_to" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$f_from" id="CtlMasterHeader_f_from" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$f_to" id="CtlMasterHeader_f_to" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$cl_from" id="CtlMasterHeader_cl_from" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$cl_to" id="CtlMasterHeader_cl_to" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$br_from" id="CtlMasterHeader_br_from" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$br_to" id="CtlMasterHeader_br_to" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$i_from" id="CtlMasterHeader_i_from" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$i_to" id="CtlMasterHeader_i_to" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$s_from" id="CtlMasterHeader_s_from" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$s_to" id="CtlMasterHeader_s_to" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$p_from" id="CtlMasterHeader_p_from" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$p_to" id="CtlMasterHeader_p_to" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$si_from" id="CtlMasterHeader_si_from" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$si_to" id="CtlMasterHeader_si_to" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$ir_Value_st" id="CtlMasterHeader_ir_Value_st" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$ir_range" id="CtlMasterHeader_ir_range" value="10" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$ir_trans_st" id="CtlMasterHeader_ir_trans_st" value="80" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$cnmr_Value_st" id="CtlMasterHeader_cnmr_Value_st" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$cnmr_range" id="CtlMasterHeader_cnmr_range" value="2.0" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$cnmr_not_st" id="CtlMasterHeader_cnmr_not_st" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$hnmr_Value_st" id="CtlMasterHeader_hnmr_Value_st" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$hnmr_range" id="CtlMasterHeader_hnmr_range" value="0.2" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$hnmr_not_st" id="CtlMasterHeader_hnmr_not_st" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$massno_st" id="CtlMasterHeader_massno_st" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$page_list" id="CtlMasterHeader_page_list" value="20" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$cur_page" id="CtlMasterHeader_cur_page" value="1" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$jsearch_opt" id="CtlMasterHeader_jsearch_opt" value="false" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$order_opt" id="CtlMasterHeader_order_opt" value="1" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$match_type" id="CtlMasterHeader_match_type" value="1" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$order_desc" id="CtlMasterHeader_order_desc" value="0" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$result_type" id="CtlMasterHeader_result_type" value="false" />
+        
+        <input type="hidden" name="ctl00$CtlMasterHeader$spectrum" id="CtlMasterHeader_spectrum" />
+    </div>
+</div>
+
+
+        
+        <div id="pnlScroll" class="BodyArea">
+	
+            
+        
+
+<link href="/Forms/Project/SearchResult/Styles/SearchResult.css" rel="stylesheet" type="text/css" />
+<p>
+    <span class="summary-title">SDBS Search Results:</span>
+    <span class="summary-main">1 - 20 out of 35 hits</span>
+    <span class="summary-sort">Sort by:
+       <select name="ctl00$BodyContentPlaceHolder$ResultTitles$ddlOrderBy" id="BodyContentPlaceHolder_ResultTitles_ddlOrderBy">
+		<option selected="selected" value="1">Molecular Weight</option>
+		<option value="2">Number of Carbon</option>
+		<option value="3">SDBS No.</option>
+
+	</select>
+       <select name="ctl00$BodyContentPlaceHolder$ResultTitles$ddlOrder" id="BodyContentPlaceHolder_ResultTitles_ddlOrder">
+		<option selected="selected" value="0">Ascending Order</option>
+		<option value="1">Descending Order</option>
+
+	</select>
+        <input type="submit" name="ctl00$BodyContentPlaceHolder$ResultTitles$BtnSRS_Search" value="Search" id="BodyContentPlaceHolder_ResultTitles_BtnSRS_Search" />
+    </span>
+<p/>
+        <table width ="100%" border ="0" class ="item-head">
+            <tbody>
+                <tr>
+                  <th class="sdbs-lbl"><span id="BodyContentPlaceHolder_SDBSNoLbl" class="SDBSNoLbl">SDBS No</span></th>
+                  <th class="mol-form-lbl"><span id="BodyContentPlaceHolder_MolFormulaLbl" class="MolFormulaLbl">Molecular Formula</span></th>
+                  <th class="mol-weight-lbl"><span id="BodyContentPlaceHolder_MolWeightLbl" class="MolWeightLbl">Molecular Weight</span></th>
+                  <th class="ms-lbl"><span id="BodyContentPlaceHolder_MSLbl" class="MSLbl">MS</span></th>
+                  <th class="cnm-lbl"><span id="BodyContentPlaceHolder_CNMRLbl" class="CNMRLbl">CNMR</span></th>
+                  <th class="hnmr-lbl"><span id="BodyContentPlaceHolder_HNMRLbl" class="HNMRLbl">HNMR</span></th>
+                  <th class="ir-lbl"><span id="BodyContentPlaceHolder_IRLbl" class="IRLbl">IR</span></th>
+                  <th class="raman-lbl"><span id="BodyContentPlaceHolder_RamanLbl" class="RamanLbl">Raman</span></th>
+                  <th class="esr-lbl"><span id="BodyContentPlaceHolder_ESRLbl" class="ESRLbl">ESR</span></th>
+                  <th class="comp-name"><span id="BodyContentPlaceHolder_CompNameLbl" class="CompNameLbl">Compound Name</span></th>
+                </tr>
+                <tr>
+                    <td CssClass ="ruled-line" colspan="10">
+                        <hr>
+                    </td>
+                </tr>
+                
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl00$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=29180&quot;, false, true))">29180</a></td>
+                            <td class="form-val">C12H12N2 2HCl</td>
+                            <td class="mol-weight-val">184.2</td>
+
+                            
+                            <td class="ms-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl00$ctl01&quot;, &quot;&quot;, false, &quot;&quot;, &quot;MsSpectralView.aspx?fname=MSIW9881&amp;sdbsno=29180&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="cnmr-val">
+                                <span>N</span></td>
+                            <td class="hnmr-val">
+                                <span>N</span></td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl00$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA41409&amp;sdbsno=29180&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">benzidine dihydrochloride</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl01$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=31572&quot;, false, true))">31572</a></td>
+                            <td class="form-val">C12H12N2</td>
+                            <td class="mol-weight-val">184.2</td>
+
+                            
+                            <td class="ms-val">
+                                <span>N</span></td>
+                            <td class="cnmr-val">
+                                <span>N</span></td>
+                            <td class="hnmr-val">
+                                <span>N</span></td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl01$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA47679&amp;sdbsno=31572&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">benzidine</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl02$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=10903&quot;, false, true))">10903</a></td>
+                            <td class="form-val">C13H14N2 2HCl</td>
+                            <td class="mol-weight-val">198.3</td>
+
+                            
+                            <td class="ms-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl02$ctl01&quot;, &quot;&quot;, false, &quot;&quot;, &quot;MsSpectralView.aspx?fname=MSNW2325&amp;sdbsno=10903&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="cnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl02$ctl03&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CNmrSpectralView.aspx?imgdir=cds&amp;fname=CDS10314&amp;sdbsno=10903&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="hnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl02$ctl05&quot;, &quot;&quot;, false, &quot;&quot;, &quot;HNmrSpectralView.aspx?imgdir=hsp&amp;fname=HSP47830&amp;sdbsno=10903&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl02$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA14067&amp;sdbsno=10903&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">3-methylbenzidine dihydrochloride</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl03$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=2961&quot;, false, true))">2961</a></td>
+                            <td class="form-val">C14H16N2</td>
+                            <td class="mol-weight-val">212.3</td>
+
+                            
+                            <td class="ms-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl03$ctl01&quot;, &quot;&quot;, false, &quot;&quot;, &quot;MsSpectralView.aspx?fname=MSNW1554&amp;sdbsno=2961&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="cnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl03$ctl03&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CNmrSpectralView.aspx?imgdir=cds&amp;fname=CDS00850&amp;sdbsno=2961&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="hnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl03$ctl05&quot;, &quot;&quot;, false, &quot;&quot;, &quot;HNmrSpectralView.aspx?imgdir=hsp&amp;fname=HSP49129&amp;sdbsno=2961&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl03$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA810&amp;sdbsno=2961&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">3,3'-dimethylbenzidine</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl04$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=2977&quot;, false, true))">2977</a></td>
+                            <td class="form-val">C14H16N2 2HCl</td>
+                            <td class="mol-weight-val">212.3</td>
+
+                            
+                            <td class="ms-val">
+                                <span>N</span></td>
+                            <td class="cnmr-val">
+                                <span>N</span></td>
+                            <td class="hnmr-val">
+                                <span>N</span></td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl04$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA22813&amp;sdbsno=2977&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">3,3'-dimethylbenzidine dihydrochloride</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl05$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=7338&quot;, false, true))">7338</a></td>
+                            <td class="form-val">C14H16N2 H2O4S</td>
+                            <td class="mol-weight-val">212.3</td>
+
+                            
+                            <td class="ms-val">
+                                <span>N</span></td>
+                            <td class="cnmr-val">
+                                <span>N</span></td>
+                            <td class="hnmr-val">
+                                <span>N</span></td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl05$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA21868&amp;sdbsno=7338&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">3,3'-dimethylbenzidine sulfate</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl06$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=7339&quot;, false, true))">7339</a></td>
+                            <td class="form-val">C14H16N2 C4H6O6</td>
+                            <td class="mol-weight-val">212.3</td>
+
+                            
+                            <td class="ms-val">
+                                <span>N</span></td>
+                            <td class="cnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl06$ctl03&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CNmrSpectralView.aspx?imgdir=cds&amp;fname=CDS13738&amp;sdbsno=7339&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="hnmr-val">
+                                <span>N</span></td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl06$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA20985&amp;sdbsno=7339&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">3,3'-dimethylbenzidine L-(+)-tartrate</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl07$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=10548&quot;, false, true))">10548</a></td>
+                            <td class="form-val">C12H14N4 4HCl</td>
+                            <td class="mol-weight-val">214.3</td>
+
+                            
+                            <td class="ms-val">
+                                <span>N</span></td>
+                            <td class="cnmr-val">
+                                <span>N</span></td>
+                            <td class="hnmr-val">
+                                <span>N</span></td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl07$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA7699&amp;sdbsno=10548&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">3,3',4,4'-biphenyltetramine tetrahydrochloride</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl08$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=22204&quot;, false, true))">22204</a></td>
+                            <td class="form-val">C12H14N4</td>
+                            <td class="mol-weight-val">214.3</td>
+
+                            
+                            <td class="ms-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl08$ctl01&quot;, &quot;&quot;, false, &quot;&quot;, &quot;MsSpectralView.aspx?fname=MSNW7955&amp;sdbsno=22204&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="cnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl08$ctl03&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CNmrSpectralView.aspx?imgdir=cds&amp;fname=CDS11663&amp;sdbsno=22204&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="hnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl08$ctl05&quot;, &quot;&quot;, false, &quot;&quot;, &quot;HNmrSpectralView.aspx?imgdir=hsp&amp;fname=HSP45255&amp;sdbsno=22204&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl08$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA28267&amp;sdbsno=22204&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">3,3',4,4'-biphenyltetramine</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl09$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=19440&quot;, false, true))">19440</a></td>
+                            <td class="form-val">C12H12N2O2</td>
+                            <td class="mol-weight-val">216.2</td>
+
+                            
+                            <td class="ms-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl09$ctl01&quot;, &quot;&quot;, false, &quot;&quot;, &quot;MsSpectralView.aspx?fname=MSIW6666&amp;sdbsno=19440&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="cnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl09$ctl03&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CNmrSpectralView.aspx?imgdir=cds&amp;fname=CDS01511&amp;sdbsno=19440&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="hnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl09$ctl05&quot;, &quot;&quot;, false, &quot;&quot;, &quot;HNmrSpectralView.aspx?imgdir=hsp&amp;fname=HSP47095&amp;sdbsno=19440&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl09$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA68353&amp;sdbsno=19440&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">4,4'-diamino-3,3'-biphenyldiol</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl10$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=960&quot;, false, true))">960</a></td>
+                            <td class="form-val">C16H20N2</td>
+                            <td class="mol-weight-val">240.3</td>
+
+                            
+                            <td class="ms-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl10$ctl01&quot;, &quot;&quot;, false, &quot;&quot;, &quot;MsSpectralView.aspx?fname=MSNW7197&amp;sdbsno=960&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="cnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl10$ctl03&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CNmrSpectralView.aspx?imgdir=cds&amp;fname=CDS07349&amp;sdbsno=960&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="hnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl10$ctl05&quot;, &quot;&quot;, false, &quot;&quot;, &quot;HNmrSpectralView.aspx?imgdir=hsp&amp;fname=HSP04939&amp;sdbsno=960&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl10$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA66160&amp;sdbsno=960&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">N,N,N',N'-tetramethylbenzidine</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl11$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=10947&quot;, false, true))">10947</a></td>
+                            <td class="form-val">C16H20N2 2HCl</td>
+                            <td class="mol-weight-val">240.3</td>
+
+                            
+                            <td class="ms-val">
+                                <span>N</span></td>
+                            <td class="cnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl11$ctl03&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CNmrSpectralView.aspx?imgdir=cds&amp;fname=CDS10285&amp;sdbsno=10947&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="hnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl11$ctl05&quot;, &quot;&quot;, false, &quot;&quot;, &quot;HNmrSpectralView.aspx?imgdir=hsp&amp;fname=HSP47778&amp;sdbsno=10947&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl11$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA5152&amp;sdbsno=10947&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">3,3'-diethylbenzidine dihydrochloride</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl12$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=13737&quot;, false, true))">13737</a></td>
+                            <td class="form-val">C16H20N2</td>
+                            <td class="mol-weight-val">240.3</td>
+
+                            
+                            <td class="ms-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl12$ctl01&quot;, &quot;&quot;, false, &quot;&quot;, &quot;MsSpectralView.aspx?fname=MSNW6877&amp;sdbsno=13737&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="cnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl12$ctl03&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CNmrSpectralView.aspx?imgdir=cds&amp;fname=CDS05468&amp;sdbsno=13737&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="hnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl12$ctl05&quot;, &quot;&quot;, false, &quot;&quot;, &quot;HNmrSpectralView.aspx?imgdir=hsp&amp;fname=HSP03731&amp;sdbsno=13737&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl12$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA18659&amp;sdbsno=13737&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl12$ctl09&quot;, &quot;&quot;, false, &quot;&quot;, &quot;RamanSpectralView.aspx?fname=RM3414&amp;sdbsno=13737&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">3,3',5,5'-tetramethylbenzidine</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl13$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=15733&quot;, false, true))">15733</a></td>
+                            <td class="form-val">C16H20N2 2HCl</td>
+                            <td class="mol-weight-val">240.3</td>
+
+                            
+                            <td class="ms-val">
+                                <span>N</span></td>
+                            <td class="cnmr-val">
+                                <span>N</span></td>
+                            <td class="hnmr-val">
+                                <span>N</span></td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl13$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA58473&amp;sdbsno=15733&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">3,3',5,5'-tetramethylbenzidine dihydrochloride</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl14$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=3052&quot;, false, true))">3052</a></td>
+                            <td class="form-val">C14H16N2O2</td>
+                            <td class="mol-weight-val">244.3</td>
+
+                            
+                            <td class="ms-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl14$ctl01&quot;, &quot;&quot;, false, &quot;&quot;, &quot;MsSpectralView.aspx?fname=MSIW6072&amp;sdbsno=3052&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="cnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl14$ctl03&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CNmrSpectralView.aspx?imgdir=cds&amp;fname=CDS00865&amp;sdbsno=3052&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="hnmr-val">
+                                <span>N</span></td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl14$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA51184&amp;sdbsno=3052&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">3,3'-dimethoxybenzidine</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl15$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=17235&quot;, false, true))">17235</a></td>
+                            <td class="form-val">C14H16N2O2 2HCl</td>
+                            <td class="mol-weight-val">244.3</td>
+
+                            
+                            <td class="ms-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl15$ctl01&quot;, &quot;&quot;, false, &quot;&quot;, &quot;MsSpectralView.aspx?fname=MSIW3876&amp;sdbsno=17235&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="cnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl15$ctl03&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CNmrSpectralView.aspx?imgdir=cds&amp;fname=CDS02695&amp;sdbsno=17235&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="hnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl15$ctl05&quot;, &quot;&quot;, false, &quot;&quot;, &quot;HNmrSpectralView.aspx?imgdir=hsp&amp;fname=HSP43820&amp;sdbsno=17235&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl15$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA61629&amp;sdbsno=17235&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">3,3'-dimethoyxbenzidine dihydrochloride</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl16$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=7039&quot;, false, true))">7039</a></td>
+                            <td class="form-val">C12H10Cl2N2</td>
+                            <td class="mol-weight-val">253.1</td>
+
+                            
+                            <td class="ms-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl16$ctl01&quot;, &quot;&quot;, false, &quot;&quot;, &quot;MsSpectralView.aspx?fname=MSNW4215&amp;sdbsno=7039&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="cnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl16$ctl03&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CNmrSpectralView.aspx?imgdir=cds&amp;fname=CDS04661&amp;sdbsno=7039&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="hnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl16$ctl05&quot;, &quot;&quot;, false, &quot;&quot;, &quot;HNmrSpectralView.aspx?imgdir=hsp&amp;fname=HSP01569&amp;sdbsno=7039&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl16$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA29446&amp;sdbsno=7039&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">3,3'-dichlorobenzidine</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl17$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=7040&quot;, false, true))">7040</a></td>
+                            <td class="form-val">C12H10Cl2N2 2HCl</td>
+                            <td class="mol-weight-val">253.1</td>
+
+                            
+                            <td class="ms-val">
+                                <span>N</span></td>
+                            <td class="cnmr-val">
+                                <span>N</span></td>
+                            <td class="hnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl17$ctl05&quot;, &quot;&quot;, false, &quot;&quot;, &quot;HNmrSpectralView.aspx?imgdir=hsp&amp;fname=HSP46501&amp;sdbsno=7040&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl17$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA11461&amp;sdbsno=7040&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">3,3'-dichlorobenzidine dihydrochloride</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl18$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=7528&quot;, false, true))">7528</a></td>
+                            <td class="form-val">C16H16N2O2</td>
+                            <td class="mol-weight-val">268.3</td>
+
+                            
+                            <td class="ms-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl18$ctl01&quot;, &quot;&quot;, false, &quot;&quot;, &quot;MsSpectralView.aspx?fname=MSNW5973&amp;sdbsno=7528&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="cnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl18$ctl03&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CNmrSpectralView.aspx?imgdir=cds&amp;fname=CDS13731&amp;sdbsno=7528&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="hnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl18$ctl05&quot;, &quot;&quot;, false, &quot;&quot;, &quot;HNmrSpectralView.aspx?imgdir=hsp&amp;fname=HSP48381&amp;sdbsno=7528&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl18$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA20758&amp;sdbsno=7528&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl18$ctl09&quot;, &quot;&quot;, false, &quot;&quot;, &quot;RamanSpectralView.aspx?fname=RM3306&amp;sdbsno=7528&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">N,N'-(4,4'-biphenylylene)diacetamide</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="sdbsno-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl19$ctl00&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CompoundView.aspx?sdbsno=7050&quot;, false, true))">7050</a></td>
+                            <td class="form-val">C12H10N4O4</td>
+                            <td class="mol-weight-val">274.2</td>
+
+                            
+                            <td class="ms-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl19$ctl01&quot;, &quot;&quot;, false, &quot;&quot;, &quot;MsSpectralView.aspx?fname=MSNW4093&amp;sdbsno=7050&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="cnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl19$ctl03&quot;, &quot;&quot;, false, &quot;&quot;, &quot;CNmrSpectralView.aspx?imgdir=cds&amp;fname=CDS01747&amp;sdbsno=7050&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="hnmr-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl19$ctl05&quot;, &quot;&quot;, false, &quot;&quot;, &quot;HNmrSpectralView.aspx?imgdir=hsp&amp;fname=HSP46178&amp;sdbsno=7050&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="ir-val"><a href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$BodyContentPlaceHolder$ResultRepeater$ctl19$ctl07&quot;, &quot;&quot;, false, &quot;&quot;, &quot;IrSpectralView.aspx?fname=NIDA11441&amp;sdbsno=7050&quot;, false, true))">Y</a>
+                                </td>
+                            <td class="rm-val">
+                                <span>N</span></td>
+                            <td class="esr-val">
+                                <span>N</span></td>
+                            <td class="comp-name">3,3'-dinitrobenzidine</td>
+                        </tr>
+                    
+            </tbody>
+        </table>
+    <hr/>
+    
+
+<link href="/Forms/Project/SearchResult/Styles/Pagination.css" rel="stylesheet" type="text/css" />
+<div class="pagination">
+    
+    
+            
+            <span id="BodyContentPlaceHolder_Pagination_PageNumberList_PageNumberLabel_0" class="pagination-current">1</span>
+        
+            <a id="BodyContentPlaceHolder_Pagination_PageNumberList_PageNumberLink_1" class="pagination-link" href="javascript:__doPostBack(&#39;ctl00$BodyContentPlaceHolder$Pagination$PageNumberList$ctl01$PageNumberLink&#39;,&#39;&#39;)">2</a>
+            
+        
+    
+</div>
+
+
+        
+</div>
+
+        
+        
+
+<link href="/Forms/Project/SearchResult/Styles/SearchResult.css" rel="stylesheet" type="text/css" />
+<div class="result-pagination FooterArea">
+     <p><a id="CtlResultFooter_ReturnToSearchLbl" class="ReturnToSearchLbl" href="SearchInformation.aspx">Return to Search</a><br/></p>
+     <p><a id="CtlResultFooter_FooterUrl" href="https://www.aist.go.jp/index_en.html" target="_blank">(c) National Institute of Advanced Industrial Science and Technology (AIST)</a><br/></p>
+</div>
+        
+    
+
+<script type="text/javascript">
+//<![CDATA[
+WebForm_AutoFocus('btnDefault');//]]>
+</script>
+</form>
+</body>
+</html>
