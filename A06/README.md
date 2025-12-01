@@ -2,67 +2,89 @@
 
 This folder contains the solution for assignment A06.
 
+---
+
 ## Files included
 
 - **graph.csv** – input dataset containing x and y values (linear function y = 2x)
-- **graph.py** – Python script that loads graph.csv and generates graph.png
+- **graph.py** – Python script that loads `graph.csv` and generates `graph.png`
 - **graph.png** – output image generated from the script
-- **requirements.txt** – list of Python modules required to run the script
-- **Untitled.ipynb / other notebooks** – development notebooks (not required for execution)
+- **requirements.txt** – list of Python packages required to run the assignment
+- **Untitled.ipynb** and other notebooks – development only, not required for execution
 
 ---
 
-## How to run this assignment after cloning the repository
+# Complete instructions to run the assignment
 
-### 1. Clone the repository
+Follow the steps below exactly after cloning the repository.  
+All commands must be run inside the **A06** folder.
+
+---
+
+## 1️ Clone the repository
+
+Clone the GitHub repository and navigate to the folder for this assignment:
 
 ```bash
-git clone https://github.com/<YOUR_USERNAME>/<YOUR_REPOSITORY>.git
-cd <YOUR_REPOSITORY>/A06
-```
+git clone https://github.com/ElenaOs2208/ci2.git
+## 2️ Create a virtual environment
 
-Replace `<YOUR_USERNAME>` and `<YOUR_REPOSITORY>` with the actual names.
-
----
-
-### 2. Create and activate a virtual environment
+Create an isolated Python environment so that dependencies do not interfere with the system:
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate
-```
+ This creates a folder named venv, which will contain a private Python installation.
+## 3️ Activate the virtual environment, install packages, and generate the graph
 
----
+### Activate the virtual environment
 
-### 3. Install all required Python packages
+Before installing dependencies or running scripts, activate the environment:
 
 ```bash
+source venv/bin/activate
+
+When activated, the terminal prompt will begin with:
+
+(venv)
+
+If (venv) is not visible, the environment is not active.
+Install required Python packages
+
+Inside the activated virtual environment, install all Python modules listed in requirements.txt:
+
 pip install -r requirements.txt
-```
 
 This installs:
-- pandas  
-- numpy  
-- matplotlib  
 
----
+    pandas
 
-### 4. Run the script to generate the graph
+    numpy
 
-```bash
+    matplotlib
+
+These packages are used to load the CSV file, perform numerical operations, and generate the graph.
+Run the script to generate the graph
+
+Execute the Python script that loads the CSV file and produces the output image:
+
 python3 graph.py graph.csv
-```
 
-After running this command, the file **graph.png** will be created in the same folder.
+After successfully running the script, you should see:
 
----
+Saved graph to graph.png
 
-## Verification
+This means the output graph image has been generated.
+The file graph.png will appear in the same directory.
+Verification
 
-The output image **graph.png** must contain a linear graph corresponding to the function:
+To confirm that the assignment works correctly:
 
-```
+    Ensure that the file graph.png exists.
+
+    Open the file and verify that it contains a linear graph corresponding to:
+
 y = 2 * x
-```
 
-If the graph appears and the file is generated correctly, the assignment is completed.
+If the generated image shows a correct linear function, the assignment is successfully completed.
+cd ci2/A06
+
