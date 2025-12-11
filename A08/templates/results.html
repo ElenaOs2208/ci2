@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Výsledek pro SMILES: {{ smiles }}</h2>
+
+<p><strong>ChEMBL ID:</strong> {{ compound.chembl_id }}</p>
+<p><strong>Název:</strong> {{ compound.pref_name }}</p>
+<p><strong>Formula:</strong> {{ compound.molecule_properties.full_molformula }}</p>
+<p><strong>Molekulová hmotnost:</strong> {{ compound.molecule_properties.full_molweight }}</p>
+
+<a href="{{ url_for('index') }}">← Nové hledání</a>
+{% endblock %}
