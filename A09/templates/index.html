@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>A09 Chemistry Server</title>
+</head>
+<body>
+
+<h1>A09 – Chemistry Web Server</h1>
+
+<form id="search-form">
+  <input id="smiles-input" placeholder="Enter SMILES" required>
+  <button type="submit">Search</button>
+</form>
+
+<p id="status"></p>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
+
