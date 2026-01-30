@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>ChEMBL molecule search</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <label><strong>Enter SMILES:</strong></label><br>
+    <input type="text" name="smiles" size="60" value="{{ smiles }}">
+    <br><br>
+    <button type="submit">Search</button>
+</form>
+
+<hr>
+
+{% if error %}
+    <p style="color:red;"><strong>{{ error }}</strong></p>
+
+{% elif result %}
+    <h3>Molecule information</h3>
+
+    <table border="1" cellpadding="6" cellspacing="0">
+        <tr>
+            <th align="left">ChEMBL ID</th>
+            <td>{{ result.molecule_chembl_id }}</td>
+        </tr>
+        <tr>
+            <th align="left">Molecular formula</th>
+            <td>{{ result.molecule_properties.full_molformula }}</td>
+        </tr>
+        <tr>
+            <th align="left">Molecular weight</th>
+            <td>{{ result.molecule_properties.full_mwt }}</td>
+        </tr>
+        <tr>
+            <th align="left">LogP</th>
+            <td>{{ result.molecule_properties.alogp }}</td>
+        </tr>
+        <tr>
+            <th align="left">Polar surface area</th>
+            <td>{{ result.molecule_properties.psa }}</td>
+        </tr>
+        <tr>
+            <th align="left">First approval</th>
+            <td>{{ result.first_approval }}</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <details>
+        <summary><strong>Show raw ChEMBL data</strong></summary>
+        <pre>{{ result_json }}</pre>
+    </details>
+
+{% elif smiles %}
+    <p>No molecule found.</p>
+{% endif %}
+
+{% endblock %}
+
