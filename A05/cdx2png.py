@@ -1,36 +1,54 @@
-import os
+#!/usr/bin/env python3
+
 import sys
-import pybel
+import subprocess
+from pathlib import Path
+
+
+def molecular_weight(cdxml_file):
+    result = subprocess.check_output(
+        ["obabel", cdxml_file, "-osmi", "--append", "MW"],
+        text=True
+    )
+    line = result.strip()
+    # vezmeme poslední číslo na řádku (Mr)
+    try:
+        return float(line.split()[-1])
+    except ValueError:
+        return None
+
 
 def main():
-    if len(sys.argv) < 2:
-        print("Použití: py cdx2png.py *.cdxml [nebo jiné soubory]")
+    files = sys.argv[1:]
+    if not files:
+        print("Usage: cdx2png.py *.cdxml")
         sys.exit(1)
 
-    cdxml_files = [f for f in sys.argv[1:] if f.endswith(".cdxml")]
-    if not cdxml_files:
-        print("Nebyl nalezen žádný .cdxml soubor.")
-        sys.exit(1)
+    min_mw = (None, float("inf"))
+    max_mw = (None, 0)
 
-    min_mol = None
-    max_mol = None
-    min_mass = float('inf')
-    max_mass = 0.0
+    for f in files:
+        cdxml = Path(f)
+        png = cdxml.with_suffix(".png")
 
-    for f in cdxml_files:
-        mol = next(pybel.readfile("cdxml", f))
-        mol.draw(show=False, filename=f.replace(".cdxml", ".png"))
+        # CDXML → PNG
+        subprocess.run(
+            ["obabel", str(cdxml), "-O", str(png)],
+            check=True
+        )
 
-        mass = mol.molwt
-        if mass < min_mass:
-            min_mass = mass
-            min_mol = f
-        if mass > max_mass:
-            max_mass = mass
-            max_mol = f
+        # Mr přes OpenBabel
+        mw = molecular_weight(str(cdxml))
+        if mw is not None:
+            if mw < min_mw[1]:
+                min_mw = (cdxml.name, mw)
+            if mw > max_mw[1]:
+                max_mw = (cdxml.name, mw)
 
-    print(f"Nejmenší molekula: {min_mol} (Mr = {min_mass:.2f})")
-    print(f"Největší molekula: {max_mol} (Mr = {max_mass:.2f})")
+    print(f"Lowest Mr: {min_mw[0]} ({min_mw[1]})")
+    print(f"Highest Mr: {max_mw[0]} ({max_mw[1]})")
+
 
 if __name__ == "__main__":
     main()
+
