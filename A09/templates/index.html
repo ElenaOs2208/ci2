@@ -1,21 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>A09 Chemistry Server</title>
+    <meta charset="UTF-8">
+    <title>Chemistry Web Server</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<h1>A09 – Chemistry Web Server</h1>
+<h1>Chemistry Web Server</h1>
 
-<form id="search-form">
-  <input id="smiles-input" placeholder="Enter SMILES" required>
-  <button type="submit">Search</button>
-</form>
+<input type="text" id="smiles" placeholder="Enter SMILES (e.g. CCO)">
+<button onclick="sendSmiles()">Search</button>
 
-<p id="status"></p>
+<div id="result"></div>
 
-<script src="{{ url_for('static', filename='app.js') }}"></script>
+<script>
+async function sendSmiles() {
+    const smiles = document.getElementById("smiles").value;
+
+    const response = await fetch("/api/process", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ smiles })
+    });
+
+    const data = await response.json();
+
+    let chemblInfo = "";
+    if (data.chembl && !data.chembl.error) {
+        chemblInfo = `
+            <h2>ChEMBL information</h2>
+            <ul>
+                <li><strong>ChEMBL ID:</strong> ${data.chembl.chembl_id}</li>
+                <li><strong>Formula:</strong> ${data.chembl.formula}</li>
+                <li><strong>Molecular weight:</strong> ${data.chembl.molecular_weight}</li>
+            </ul>
+        `;
+    }
+
+    document.getElementById("result").innerHTML = `
+        ${chemblInfo}
+        <h2>3D Molecule</h2>
+        <img src="${data.image}" alt="Molecule">
+    `;
+}
+</script>
 
 </body>
 </html>
