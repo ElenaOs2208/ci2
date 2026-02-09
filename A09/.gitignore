@@ -1,4 +1,10 @@
+# Python
 venv/
 __pycache__/
 *.pyc
-static/images/*.png
+
+# Generated molecule files
+static/*.mol
+static/*.pov
+static/*.png
+
